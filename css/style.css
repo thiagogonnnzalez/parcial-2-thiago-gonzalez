@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 5px;
+}
+.texto-nav{
+    font-size: 26px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease 0.1s;
+}
+.texto-nav:hover{
+    color: #a50000;
+    font-size: 30px;
+}
+.logo{
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.links-nav{
+    list-style: none;
+}
+.links-nav li{
+    display: inline-block;
+    padding: 20px;
+}
+/* header */
+
+/* footer */
+.footer{
+    background-color: antiquewhite;
+    padding: 20px 80px;
+}
+.div-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.links-footer{
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.links-footer h3{
+    font-size: 20px;
+    color: black;
+    margin-bottom: 25px;
+    font-weight: 300;
+    display: inline-block;
+}
+.links-footer ul{
+    list-style: none;
+}
+.links-footer ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.2s ease 0.1s;
+    font-weight: 200;
+}
+.links-footer ul li a:hover{
+    color: #a50000;
+    font-size: 20px;
+}
+.links-redes a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: black;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.2s ease 0.1s;
+}
+.links-redes a:hover{
+    background-color: #a50000;
+}
+/* footer */
+
+/* =====================INDEX===================== */
+/* main */
+.foto-fondo{
+    background-image: linear-gradient(to right, rgb(0 0 0 / .3), rgb(0 0 0 / .3)), url(../multimedia/godzillavskongmain.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+.foto-fondo h1{
+    margin-bottom: 50px;
+    font-size: 70px;
+    color: antiquewhite;
+}
+.foto-fondo p{
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+    color: antiquewhite;
+}
+.foto-fondo a{
+    text-decoration: none;
+    background-color: #a50000;
+    color: antiquewhite;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.5s ease 0.1s;
+    border: 3px solid;
+    border-radius: 8px;
+}
+.foto-fondo a:hover {
+    background-color: antiquewhite;
+    border-radius: 8px;
+    color: #a50000;
+}
+/* main */
+
+/* info */
+.sinopsis-index{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px 25%;
+}
+
+.sinopsis-index h1 {
+    padding: 20px;
+    font-size: 50px;
+}
+.sinopsis-index p {
+    padding: 20px;
+    font-size: 22px;
+}
+.sinopsis-index img {
+    padding: 20px;
+    height: 50vh;
+}
+/* info */
+/* =====================INDEX===================== */
+
+/* =====================RESUMEN===================== */
+.resumen {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px 25%;
+}
+
+.resumen h1 {
+    padding: 20px;
+    font-size: 50px;
+}
+.resumen p {
+    padding: 20px;
+    font-size: 22px;
+}
+.resumen img {
+    padding: 20px;
+    height: 50vh;
+}
+
+.ubicaciones{
+    background-color: antiquewhite;
+    text-align: center;
+    padding-top: 50px;
+}
+.ubicaciones h1 {
+    padding: 20px 25%;
+    font-size: 50px
+}
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px 25%;
+}
+
+.ubicacion h2 {
+    padding: 20px;
+    font-size: 25px;
+}
+.ubicacion p {
+    padding: 20px;
+    font-size: 22px;
+}
+
+.ubicacion img {
+    padding: 20px;
+    height: 70vh;
+}
+
+/* items */
+.curiosidades-fondo{
+    background-color: antiquewhite;
+}
+.curiosidades-fondo h1{
+    text-align: center;
+    font-size: 50px;
+}
+.curiosidades {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.curiosidad{
+  box-sizing: border-box;
+  width: 33.33%;
+  margin: 40px;
+  padding: 20px;
+}
+
+.contenido-curiosidad {
+  color: antiquewhite;
+  background-color: #000000;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px 50px;
+  border: 5px solid #a50000;
+  border-radius: 30px;
+}
+
+.contenido-curiosidad h2 {
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+.contenido-curiosidad p {
+    font-size: 20px;
+}
+/* items */
+
+/* =====================RESUMEN===================== */
+
+/* =====================REPARTO===================== */
+.reparto-fondo {
+    background-color: antiquewhite;
+}
+
+.reparto-fondo h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.reparto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.personajes{
+  box-sizing: border-box;
+  width: 33.33%;
+  margin: 40px;
+  padding: 20px;
+}
+
+.personaje {
+  color: antiquewhite;
+  background-color: #000000;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px 50px;
+  border: 5px solid #a50000;
+  border-radius: 30px;
+}
+
+.personaje h2 {
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+.personaje p {
+    font-size: 20px;
+}
+
+.personaje img {
+    width: 50vh;
+}
+/* =====================REPARTO===================== */
