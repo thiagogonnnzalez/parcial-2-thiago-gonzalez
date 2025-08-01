@@ -15,28 +15,58 @@ header{
     background-color: rgb(214, 201, 184);
     padding: 5px;
 }
-.texto-nav{
-    font-size: 26px;
-    font-weight: 600;
-    color: black;
-    text-decoration: none;
-    transition: all 0.2s ease 0.1s;
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 64px;
+    position: relative;
 }
-.texto-nav:hover{
-    color: #a50000;
-    font-size: 30px;
-}
-.logo{
-    cursor: pointer;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.links-nav{
+
+.nav-links {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: all 0.5s ease;
 }
-.links-nav li{
-    display: inline-block;
-    padding: 20px;
+
+.nav-links li {
+    margin-left: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a50000;
+    font-size: 25px;
+    padding: 8px 24px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.nav-links a:hover {
+    background-color: #000000;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-icon .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+#menu-toggle {
+    display: none;
 }
 /* =====================HEADER===================== */
 
@@ -605,3 +635,318 @@ form{
 
 /* =====================ERROR===================== */
 
+/* ===================== MEDIA QUERIES ===================== */
+
+/* (1024px) */
+@media (max-width: 1024px) {
+
+  .foto-fondo h1 {
+    font-size: 50px;
+  }
+
+  .foto-fondo p {
+    font-size: 28px;
+    padding: 0 10%;
+  }
+
+  .sinopsis-index,
+  .resumen,
+  .ubicacion,
+  .estudio {
+    padding: 20px 10%;
+  }
+
+  .estudio-fondo h1,
+  .resumen h1,
+  .ubicaciones h1,
+  .curiosidades-fondo h1,
+  .sinopsis-index h1 {
+    font-size: 40px;
+  }
+
+  .estudio h2 {
+    font-size: 30px;
+  }
+
+  .productor-contenido h2,
+  .contenido-curiosidad h2,
+  .personaje h2 {
+    font-size: 20px;
+  }
+
+  .contenido-curiosidad p,
+  .personaje p {
+    font-size: 18px;
+  }
+
+  .sinopsis-index img,
+  .resumen img,
+  .ubicacion img,
+  .estudio img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sinopsis-index iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .curiosidad,
+  .personajes,
+  .productor {
+    width: 48%;
+    margin: 10px 1%;
+  }
+
+  .productores {
+    justify-content: center;
+  }
+}
+/* (1024px) */
+
+/* (768px) */
+@media (max-width: 768px) {
+/* Menu Hamburguesa */
+    .logo {
+        display: none;
+    }
+    .navbar {
+        padding: 16px;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        width: 50%;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: #000000;
+        border-radius: 20px;
+        text-align: center;
+        transition: height 0.5s ease;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 20px 0;
+        width: 100%;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        height: 75vh;
+    }
+
+    #menu-toggle:checked + .menu-icon .line:nth-child(1) {
+        transform: rotate(45deg) translate(15px, 3px);
+    }
+
+    #menu-toggle:checked + .menu-icon .line:nth-child(2) {
+        transform: scale(0);
+    }
+
+    #menu-toggle:checked + .menu-icon .line:nth-child(3) {
+        transform: rotate(-45deg) translate(15px, -4px);
+    }
+
+
+/* Menu Hamburguesa */
+
+  .div-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links-footer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .foto-fondo h1 {
+    font-size: 40px;
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  .foto-fondo p {
+    font-size: 22px;
+    padding: 0 5%;
+  }
+
+  .sinopsis-index,
+  .resumen,
+  .ubicacion,
+  .estudio {
+    padding: 20px 5%;
+  }
+
+  .estudio-fondo h1,
+  .reparto-fondo h1,
+  .curiosidades-fondo h1,
+  .ubicaciones h1,
+  .resumen h1,
+  .sinopsis-index h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .productor-contenido h2,
+  .estudio h2 {
+    font-size: 25px;
+  }
+
+  .sinopsis-index p,
+  .resumen p,
+  .ubicacion p,
+  .estudio p {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .sinopsis-index img,
+  .resumen img,
+  .ubicacion img,
+  .estudio img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sinopsis-index iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .curiosidad,
+  .personajes,
+  .productor {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .container-form {
+    grid-template-columns: 1fr;
+  }
+
+  .container-form form textarea {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .melting-text{
+    font-size: 20px;
+  }
+}
+/* (768px) */
+
+/* (480px) */
+@media (max-width: 480px) {
+
+  .foto-fondo h1 {
+    font-size: 28px;
+    padding: 0 5%;
+    text-align: center;
+  }
+
+  .foto-fondo p {
+    font-size: 16px;
+    padding: 0 5%;
+  }
+
+  .foto-fondo a {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .sinopsis-index,
+  .resumen,
+  .ubicacion,
+  .estudio {
+    padding: 15px 5%;
+  }
+
+  .estudio-fondo h1,
+  .reparto-fondo h1,
+  .sinopsis-index h1,
+  .resumen h1,
+  .ubicaciones h1,
+  .curiosidades-fondo h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .info-form h2,
+  .productor-contenido h2,
+  .estudio h2,
+  .contenido-curiosidad h2,
+  .ubicacion h2 {
+    font-size: 20px;
+  }
+
+  .info-form p,
+  .contenido-curiosidad p,
+  .sinopsis-index p,
+  .resumen p,
+  .ubicacion p,
+  .estudio p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .sinopsis-index img,
+  .resumen img,
+  .ubicacion img,
+  .estudio img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sinopsis-index iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .curiosidades,
+  .reparto,
+  .productores {
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .curiosidad,
+  .personajes,
+  .productor {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .info-form a {
+    font-size: 14px;
+  }
+
+  .container-form {
+    padding: 0 10px;
+  }
+
+  .container-form form textarea {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+/* (480px) */
+
+/* ===================== MEDIA QUERIES ===================== */
